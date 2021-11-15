@@ -21,6 +21,7 @@ jobs:
     - name: Install pyaudio 
       run: |
         sudo apt-get install python3-pyaudio
+        sudo apt install portaudio19-dev
     - name: Set up Python 3.7
       uses: actions/setup-python@v1
       with:
