@@ -20,8 +20,9 @@ jobs:
     - uses: actions/checkout@v1
     - name: Install pyaudio 
       run: |
+        sudo apt-get update
         sudo apt-get install python3-pyaudio
-        sudo apt install portaudio19-dev
+        sudo apt-get install portaudio19-dev
     - name: Set up Python 3.7
       uses: actions/setup-python@v1
       with:
