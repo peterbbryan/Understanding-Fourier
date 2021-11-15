@@ -1,0 +1,32 @@
+# basic linting checks on master merge
+
+name: workflow
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+
+  build:
+  
+    runs-on: ubuntu-latest
+        
+    steps:
+    - uses: actions/checkout@v1
+    - name: Set up Python 3.7
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.7
+    - name: Install dependencies and activate
+      run: | 
+        python -m pip install -U pip
+        pip install -r requirements.txt
+    - name: Run make linting checks
+      run: |
+        ls
+        make check
