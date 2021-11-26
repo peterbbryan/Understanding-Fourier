@@ -58,11 +58,11 @@ def _figure_2(output_path: str = "./figure_2.png"):
     sinusoid_one = 0.5 * np.cos(5 * xs)
     fft_one = np.fft.fft(sinusoid_one)
     fft_one_magnitude = np.abs(fft_one)[: len(fft_one) // 2]
-    
+
     sinusoid_two = 0.5 * np.cos(25 * xs)
     fft_two = np.fft.fft(sinusoid_two)
     fft_two_magnitude = np.abs(fft_two)[: len(fft_two) // 2]
-    
+
     complex_tone = sinusoid_one + sinusoid_two
     fft_complex = np.fft.fft(complex_tone)
     fft_complex_magnitude = np.abs(fft_complex)[: len(fft_complex) // 2]
