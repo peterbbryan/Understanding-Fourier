@@ -4,7 +4,7 @@ import numpy as np
 plt.style.use("seaborn")  # switch to seaborn style
 
 
-def _figure_1(output_path: str = "./figure_1.png"):
+def _figure_1(output_path: str = "./figure_1.png") -> None:
     """
     Plot phase and magnitude.
 
